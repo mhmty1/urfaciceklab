@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <!-- Marka paleti -->
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2e6b46"/>
+      <stop offset="1" stop-color="#1f5a3a"/>
+    </linearGradient>
+
+    <!-- Yaprak çizimi: simge olarak tanımlayıp farklı boylarda kullanacağız -->
+    <symbol id="leaf">
+      <!-- yaprak gövdesi -->
+      <path d="M0,0
+               c 10,-12 24,-12 34,0
+               c -12,8 -22,14 -34,0 z"
+            fill="url(#leafGrad)" stroke="#214d36" stroke-width="1"/>
+      <!-- damarlı görünüm (çok ince) -->
+      <path d="M17,0 l0,-10 M17,0 l8,-6 M17,0 l-8,-6"
+            stroke="#214d36" stroke-width="0.6" stroke-linecap="round" opacity="0.55"/>
+    </symbol>
+
+    <!-- Tekrarlı karo -->
+    <pattern id="tile" patternUnits="userSpaceOnUse" width="600" height="600">
+      <!-- DAL RENKLERİ (koyu yeşil) -->
+      <g fill="none" stroke="#1e4a33" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.65">
+        <!-- Sol üst köşe sarmaşık -->
+        <path d="M40,120
+                 C 90,70 150,140 200,90
+                 C 230,60 270,80 295,95"/>
+        <path d="M60,190
+                 C 110,150 150,205 200,170"/>
+        <path d="M30,70
+                 C 55,100 80,115 95,150
+                 C 110,185 130,205 150,220"/>
+
+        <!-- Sağ üst köşe sarmaşık -->
+        <path d="M560,90
+                 C 510,60 470,110 430,80
+                 C 400,60 370,70 345,95"/>
+        <path d="M520,150
+                 C 470,120 440,155 395,135"/>
+        <path d="M565,40
+                 C 545,75 520,100 505,135
+                 C 490,170 470,190 450,205"/>
+
+        <!-- Sol alt köşe sarmaşık -->
+        <path d="M45,480
+                 C 95,430 150,495 205,450
+                 C 230,430 270,445 300,460"/>
+        <path d="M75,540
+                 C 120,505 155,545 205,520"/>
+        <path d="M30,420
+                 C 55,455 85,475 105,505
+                 C 120,525 145,545 165,560"/>
+
+        <!-- Sağ alt köşe sarmaşık -->
+        <path d="M560,520
+                 C 515,485 470,535 425,505
+                 C 395,485 365,495 340,515"/>
+        <path d="M530,455
+                 C 480,425 450,460 405,440"/>
+        <path d="M570,580
+                 C 545,550 520,530 505,500
+                 C 490,470 470,450 450,435"/>
+
+        <!-- Orta bölgede birkaç ince bağlantı kıvrımı -->
+        <path d="M280,260 C300,240 320,240 340,260"/>
+        <path d="M260,330 C290,310 310,345 340,325"/>
+      </g>
+
+      <!-- YAPRAKLAR (çeşitli konum ve ölçeklerde) -->
+      <g opacity="0.85">
+        <!-- sol üst -->
+        <use href="#leaf" x="80" y="110" transform="scale(1.2) rotate(-12,80,110)"/>
+        <use href="#leaf" x="125" y="85" transform="scale(1) rotate(10,125,85)"/>
+        <use href="#leaf" x="170" y="140" transform="scale(1.15) rotate(-6,170,140)"/>
+        <use href="#leaf" x="115" y="185" transform="scale(1) rotate(22,115,185)"/>
+        <use href="#leaf" x="70"  y="155" transform="scale(0.95) rotate(-18,70,155)"/>
+
+        <!-- sağ üst -->
+        <use href="#leaf" x="480" y="70" transform="scale(1.2) rotate(8,480,70)"/>
+        <use href="#leaf" x="430" y="95" transform="scale(1) rotate(-10,430,95)"/>
+        <use href="#leaf" x="395" y="145" transform="scale(1.1) rotate(14,395,145)"/>
+        <use href="#leaf" x="520" y="135" transform="scale(1) rotate(-18,520,135)"/>
+        <use href="#leaf" x="460" y="185" transform="scale(0.95) rotate(20,460,185)"/>
+
+        <!-- sol alt -->
+        <use href="#leaf" x="90"  y="460" transform="scale(1.15) rotate(-8,90,460)"/>
+        <use href="#leaf" x="135" y="430" transform="scale(1) rotate(12,135,430)"/>
+        <use href="#leaf" x="175" y="485" transform="scale(1.1) rotate(-10,175,485)"/>
+        <use href="#leaf" x="120" y="520" transform="scale(1) rotate(18,120,520)"/>
+        <use href="#leaf" x="65"  y="505" transform="scale(0.95) rotate(-22,65,505)"/>
+
+        <!-- sağ alt -->
+        <use href="#leaf" x="470" y="505" transform="scale(1.1) rotate(10,470,505)"/>
+        <use href="#leaf" x="420" y="480" transform="scale(1) rotate(-12,420,480)"/>
+        <use href="#leaf" x="380" y="530" transform="scale(1.1) rotate(14,380,530)"/>
+        <use href="#leaf" x="520" y="470" transform="scale(1) rotate(-18,520,470)"/>
+        <use href="#leaf" x="455" y="545" transform="scale(0.95) rotate(16,455,545)"/>
+
+        <!-- orta bölgeye birkaç küçük yaprak -->
+        <use href="#leaf" x="290" y="240" transform="scale(0.95) rotate(8,290,240)" opacity="0.85"/>
+        <use href="#leaf" x="315" y="320" transform="scale(0.95) rotate(-10,315,320)" opacity="0.85"/>
+      </g>
+
+      <!-- çok hafif doku noktaları -->
+      <g fill="#2f6a3e" opacity="0.10">
+        <circle cx="95" cy="65" r="2"/>
+        <circle cx="520" cy="95" r="2"/>
+        <circle cx="75" cy="520" r="2"/>
+        <circle cx="515" cy="545" r="2"/>
+        <circle cx="305" cy="300" r="1.8"/>
+      </g>
+    </pattern>
+  </defs>
+
+  <!-- Karoyu döşe -->
+  <rect width="600" height="600" fill="url(#tile)"/>
+</svg>

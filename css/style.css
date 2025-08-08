@@ -1,0 +1,140 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Georgia&display=swap');
+
+/* Genel Gövde */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f8f4;
+  background-image: url("images/ivy-pattern.svg");
+  background-repeat: repeat;
+  background-size: 400px;
+  background-position: center;
+  font-family: 'Georgia', serif;
+  color: #1a1a1a;
+}
+
+/* Responsive desen boyutu */
+@media (max-width: 768px) {
+  body {
+    background-size: 250px;
+  }
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(15, 44, 28, 0.7);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+  font-family: 'Playfair Display', serif;
+  color: #f5d67b !important;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.08);
+}
+
+/* Hero Alanı */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background: none;
+}
+
+.hero-logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  color: #214d36;
+  font-size: 2.8rem;
+}
+
+.hero-content p {
+  color: #3f3f3f;
+  font-size: 1.2rem;
+}
+
+/* Ana Buton */
+.btn-main {
+  background-color: #d4af37;
+  color: #0f2c1c;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.btn-main:hover {
+  background-color: #b38e1d;
+  color: white;
+  transform: scale(1.03);
+}
+
+/* Ürün Kartları */
+.product-box {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+  border: 1px dashed goldenrod;
+  transition: transform 0.3s ease;
+}
+
+.product-box:hover {
+  transform: scale(1.02);
+}
+
+.product-box img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.product-box h5 {
+  font-size: 1.4rem;
+  color: #0f2c1c;
+  margin-bottom: 10px;
+}
+
+.product-box p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0f2c1c;
+  color: #f5d67b;
+  padding: 40px 0 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
